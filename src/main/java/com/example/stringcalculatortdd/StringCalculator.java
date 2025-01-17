@@ -8,8 +8,13 @@ public class StringCalculator {
             return 0;
         }
 
-        //code for adding new lines
-        String[] numbers = input.split(",|\n");
+        //code for adding other delimeters
+        String delimiter = ",|\n";
+        if (input.matches("//(.*)\n(.*)")) {
+            delimiter = Character.toString(input.charAt(2));
+            input = input.substring(4);
+        }
+        String[] numbers = input.split(delimiter);
         int sum = 0;
         for (String number : numbers) {
             sum += toInt(number);
