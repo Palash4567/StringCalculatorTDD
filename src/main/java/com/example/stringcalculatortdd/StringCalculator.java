@@ -8,8 +8,8 @@ public class StringCalculator {
             return 0;
         }
 
-        //code for adding two numbers
-        String[] numbers = input.split(",");
+        //code for adding new lines
+        String[] numbers = input.split(",|\n");
         int sum = 0;
         for (String number : numbers) {
             sum += toInt(number);
