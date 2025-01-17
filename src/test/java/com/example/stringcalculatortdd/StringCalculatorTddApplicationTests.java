@@ -27,4 +27,9 @@ class StringCalculatorTddApplicationTests {
         assertEquals(6, StringCalculator.add("1,5"));
     }
 
+    @Test
+    public void testAnyAmountOfNumbers(){
+        assertEquals(6, StringCalculator.add("1,2,3"));
+    }
+
 }
