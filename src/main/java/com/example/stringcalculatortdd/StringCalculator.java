@@ -11,8 +11,8 @@ public class StringCalculator {
         //code for adding two numbers
         String[] numbers = input.split(",");
         int sum = 0;
-        if (numbers.length > 1) {
-            sum = toInt(numbers[0]) + toInt(numbers[1]);
+        for (String number : numbers) {
+            sum += toInt(number);
         }
         return sum;
     }
